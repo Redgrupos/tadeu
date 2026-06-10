@@ -310,23 +310,48 @@ function App() {
               <tbody>
                 <tr>
                   <td><strong>A. Bateria</strong></td>
-                  <td>Tire da tomada e observe se a carga despenca. Abra o <code>cmd</code>, digite <code>powercfg /batteryreport</code> e confira se a capacidade real está acima de 75%.</td>
+                  <td>
+                    Tire da tomada e observe se a carga despenca. Abra o <code>cmd</code>, digite <code>powercfg /batteryreport</code> e confira se a capacidade real está acima de 75%.
+                    <div className="test-fail-alert">
+                      <strong>🚨 E se falhar?</strong> Isso significa que a bateria está viciada e vai te deixar na mão. Exija a troca da bateria na hora ou pule fora.
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td><strong>B. Hardware</strong></td>
-                  <td>Aperte <code>Ctrl+Shift+Esc</code>. Em "Desempenho", confirme se tem 16GB de RAM e se o CPU é i5 de 8ª geração ou superior.</td>
+                  <td>
+                    Aperte <code>Ctrl+Shift+Esc</code>. Em "Desempenho", confirme se tem 16GB de RAM e se o CPU é i5 de 8ª geração ou superior.
+                    <div className="test-fail-alert">
+                      <strong>🚨 E se falhar?</strong> Estão tentando te empurrar uma máquina mais fraca ou velha. Agradeça e saia da loja imediatamente, é cilada.
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td><strong>C. Teclado e Touchpad</strong></td>
-                  <td>Abra o Bloco de Notas e aperte todas as teclas de A a Z, Enter e setas. Deslize o dedo por todo o touchpad para ver se não pula.</td>
+                  <td>
+                    Abra o Bloco de Notas e aperte todas as teclas de A a Z, Enter e setas. Deslize o dedo por todo o touchpad para ver se não pula.
+                    <div className="test-fail-alert">
+                      <strong>🚨 E se falhar?</strong> Trocar teclado de notebook é caro e dá dor de cabeça. Peça para ele buscar outra unidade idêntica no estoque.
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td><strong>D. Tela</strong></td>
-                  <td>Procure "Dead Pixel Test" no YouTube. Olhe em tela cheia (branca e preta) buscando manchas de pressão ou pontos pretos.</td>
+                  <td>
+                    Procure "Dead Pixel Test" no YouTube. Olhe em tela cheia (branca e preta) buscando manchas de pressão ou pontos pretos.
+                    <div className="test-fail-alert">
+                      <strong>🚨 E se falhar?</strong> Mancha na tela não tem conserto fácil. Jamais compre tela com defeito, exija outra máquina.
+                    </div>
+                  </td>
                 </tr>
                 <tr>
-                  <td><strong>E. Portas USB</strong></td>
-                  <td>Abra e feche a tampa 3 vezes para sentir a dobradiça. Plugue um pendrive em todas as portas USB para testar leitura.</td>
+                  <td><strong>E. Estrutura e USB</strong></td>
+                  <td>
+                    Abra e feche a tampa 3 vezes para sentir a dobradiça. Plugue um pendrive ou mouse nas portas USB.
+                    <div className="test-fail-alert">
+                      <strong>🚨 E se falhar?</strong> Dobradiça frouxa vai quebrar a carcaça rápido. USB com mal contato é placa-mãe ruim. Recuse o aparelho.
+                    </div>
+                  </td>
                 </tr>
               </tbody>
             </table>
