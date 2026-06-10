@@ -15,6 +15,7 @@ const quickCards = [
     screen: "Tela 14\" Full HD IPS",
     price: "R$ 1.900 – 2.200",
     searchQuery: "Notebook Lenovo ThinkPad T490 i5 16gb 512gb",
+    image: "/images/t490.png",
     details: {
       summary: "O T490 é a evolução direta do T480. Ele é um pouco mais fino, leve e traz processadores mais recentes, mantendo o excelente teclado da linha ThinkPad.",
       goodFor: ["Multitarefa pesada (Muitas abas abertas)", "Planilhas complexas no Excel", "Apresentações e uso de CRMs web", "Uso corporativo intenso diário"],
@@ -34,6 +35,7 @@ const quickCards = [
     screen: "Tela 14\" Full HD",
     price: "R$ 1.500 – 1.800",
     searchQuery: "Notebook Lenovo ThinkPad T480 i5 16gb 512gb",
+    image: "/images/t480.png",
     details: {
       summary: "Conhecido como o 'tanque de guerra' corporativo. É uma máquina extremamente robusta, muito fácil de dar manutenção e trocar peças.",
       goodFor: ["Estudos e rotinas de escritório", "Trabalhos longos de digitação", "Pessoas desastradas (muito resistente)"],
@@ -53,6 +55,7 @@ const quickCards = [
     screen: "Tela 14\" Full HD anti-reflexo",
     price: "R$ 2.000 – 2.300",
     searchQuery: "Notebook HP EliteBook 840 G6 i5 16gb 512gb",
+    image: "/images/elitebook.png",
     details: {
       summary: "A linha EliteBook da HP tem um acabamento impecável em alumínio que lembra os MacBooks. É leve, elegante e tem uma tela de muita qualidade.",
       goodFor: ["Reuniões com clientes (Visual Premium)", "Transporte constante (Mochila)", "Longas horas de tela (Anti-reflexo)"],
@@ -72,6 +75,7 @@ const quickCards = [
     screen: "Tela 14\" Full HD",
     price: "R$ 1.400 – 1.700",
     searchQuery: "Notebook Dell Latitude 5490 i5 16gb 512gb",
+    image: "/images/latitude5490.png",
     details: {
       summary: "O 5490 é a escolha segura para economizar. Não é a máquina mais bonita ou fina, mas seu processador e memória entregam a mesma velocidade das outras.",
       goodFor: ["Orçamentos curtos", "Uso básico a intermediário (Word, Excel, Web)", "Escritórios fixos (Pouco transporte)"],
@@ -91,6 +95,7 @@ const quickCards = [
     screen: "Tela 13\" Full HD, chassis carbono",
     price: "R$ 1.700 – 2.000",
     searchQuery: "Notebook Dell Latitude 7390 i5 16gb 512gb",
+    image: "/images/latitude7390.png",
     details: {
       summary: "O diferencial aqui é o tamanho: tem tela de 13 polegadas, bordas finíssimas e material resistente. Quase não se sente o peso dele na bolsa.",
       goodFor: ["Levar em voos e viagens curtas", "Transporte urbano diário de transporte público", "Vendedores externos"],
@@ -151,7 +156,10 @@ function App() {
           <div className="quick-cards-grid">
             {quickCards.map((card) => (
               <div key={card.id} className={`quick-card ${card.cardClass}`}>
-                <div className={`quick-pill ${card.pillClass}`}>{card.pillText}</div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.5rem' }}>
+                  <div className={`quick-pill ${card.pillClass}`} style={{ marginBottom: 0 }}>{card.pillText}</div>
+                  <img src={card.image} alt={card.title} className="card-mini-image" />
+                </div>
                 <h3 className="quick-title">{card.title}</h3>
                 <p className="quick-subtitle">{card.subtitle}</p>
                 
