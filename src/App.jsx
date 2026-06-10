@@ -109,15 +109,25 @@ const InfoIcon = () => <svg width="14" height="14" viewBox="0 0 24 24" fill="non
 
 function App() {
   const [selectedCard, setSelectedCard] = useState(null);
+  const [touchStartY, setTouchStartY] = useState(null);
 
   const openModal = (card) => {
     setSelectedCard(card);
-    document.body.style.overflow = 'hidden'; // Evita que a tela de fundo role
+    document.body.style.overflow = 'hidden'; 
   };
   
   const closeModal = () => {
     setSelectedCard(null);
-    document.body.style.overflow = ''; // Restaura o scroll
+    document.body.style.overflow = ''; 
+    setTouchStartY(null);
+  };
+
+  const handleTouchMove = (e) => {
+    if (!touchStartY) return;
+    const diffY = e.targetTouches[0].clientY - touchStartY;
+    if (diffY > 60) { // Se arrastar 60px para baixo
+      closeModal();
+    }
   };
 
   return (
@@ -273,31 +283,46 @@ function App() {
       {selectedCard && (
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={closeModal}>×</button>
-            <div className={`quick-pill ${selectedCard.pillClass}`} style={{marginBottom: '0.5rem'}}>{selectedCard.pillText}</div>
-            <h2 className="modal-title">{selectedCard.title}</h2>
-            <p className="modal-desc">{selectedCard.details.summary}</p>
             
-            <div className="modal-grid">
-              <div className="modal-pros">
-                <h4 className="modal-subtitle">✅ Excelente para:</h4>
-                <ul className="modal-list">
-                  {selectedCard.details.goodFor.map((item, idx) => <li key={idx}>{item}</li>)}
-                </ul>
-              </div>
-              <div className="modal-cons">
-                <h4 className="modal-subtitle">❌ Não serve para:</h4>
-                <ul className="modal-list">
-                  {selectedCard.details.badFor.map((item, idx) => <li key={idx}>{item}</li>)}
-                </ul>
+            {/* Header Fixo e área de arrasto */}
+            <div 
+              className="modal-header"
+              onTouchStart={(e) => setTouchStartY(e.targetTouches[0].clientY)}
+              onTouchMove={handleTouchMove}
+            >
+              <div className="drag-handle"></div>
+              <button className="modal-close" onClick={closeModal}>×</button>
+            </div>
+
+            {/* Corpo com Scroll */}
+            <div className="modal-scroll-body">
+              <div className={`quick-pill ${selectedCard.pillClass}`} style={{marginBottom: '0.5rem'}}>{selectedCard.pillText}</div>
+              <h2 className="modal-title">{selectedCard.title}</h2>
+              <p className="modal-desc">{selectedCard.details.summary}</p>
+              
+              <div className="modal-grid">
+                <div className="modal-pros">
+                  <h4 className="modal-subtitle">✅ Excelente para:</h4>
+                  <ul className="modal-list">
+                    {selectedCard.details.goodFor.map((item, idx) => <li key={idx}>{item}</li>)}
+                  </ul>
+                </div>
+                <div className="modal-cons">
+                  <h4 className="modal-subtitle">❌ Não serve para:</h4>
+                  <ul className="modal-list">
+                    {selectedCard.details.badFor.map((item, idx) => <li key={idx}>{item}</li>)}
+                  </ul>
+                </div>
               </div>
             </div>
             
+            {/* Footer Fixo */}
             <div className="modal-footer">
-              <a href={`https://www.google.com/search?q=${encodeURIComponent(selectedCard.searchQuery)}`} target="_blank" rel="noreferrer" className="btn-action btn-primary" style={{display: 'inline-flex', padding: '0.6rem 1.5rem'}}>
+              <a href={`https://www.google.com/search?q=${encodeURIComponent(selectedCard.searchQuery)}`} target="_blank" rel="noreferrer" className="btn-action btn-primary" style={{display: 'inline-flex', padding: '0.85rem 1.5rem', width: '100%', justifyContent: 'center', fontSize: '1.05rem', borderRadius: '10px'}}>
                 <GoogleIcon /> Buscar este modelo no Google
               </a>
             </div>
+
           </div>
         </div>
       )}

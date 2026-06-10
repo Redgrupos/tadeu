@@ -309,21 +309,44 @@ code {
   background: white;
   width: 100%;
   max-width: 600px;
-  max-height: 90vh; /* Limita a altura a 90% da tela */
-  overflow-y: auto; /* Adiciona scrollbar interna se ficar maior que a tela */
+  max-height: 90vh;
   border-radius: 12px;
-  padding: 2rem;
+  display: flex;
+  flex-direction: column;
   position: relative;
   box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+  overflow: hidden; /* Container principal não rola */
+}
+
+.modal-header {
+  position: relative;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  flex-shrink: 0;
 }
 
 .modal-close {
-  position: absolute;
-  top: 1rem; right: 1rem;
   background: none; border: none;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
+  line-height: 1;
   cursor: pointer;
   color: #6b7280;
+  transition: color 0.2s;
+}
+
+.modal-close:hover {
+  color: #111827;
+}
+
+.drag-handle {
+  display: none; /* Só aparece no mobile */
+}
+
+.modal-scroll-body {
+  padding: 0 2rem 1.5rem 2rem;
+  overflow-y: auto; /* Rola internamente */
+  flex-grow: 1;
 }
 
 .modal-title {
@@ -342,7 +365,7 @@ code {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .modal-subtitle {
@@ -379,8 +402,9 @@ code {
 
 .modal-footer {
   border-top: 1px solid #e5e7eb;
-  padding-top: 1.5rem;
-  text-align: center;
+  padding: 1.25rem 2rem;
+  flex-shrink: 0;
+  background: white;
 }
 
 /* Print e Responsive */
@@ -449,22 +473,25 @@ code {
 
   /* --- MODAL Estilo Bottom Sheet (Aplicativo) --- */
   .modal-overlay {
-    align-items: flex-end; /* Cola o modal no fundo da tela */
+    align-items: flex-end; 
     padding: 0;
   }
   
   .modal-content {
-    padding: 2.5rem 1.5rem 2rem 1.5rem;
-    max-height: 85vh; /* Deixa a parte superior da tela livre */
-    border-radius: 24px 24px 0 0; /* Arredonda apenas em cima */
+    max-height: 90vh; /* Usa 90% da altura da tela no mobile */
+    border-radius: 24px 24px 0 0; 
     width: 100%;
     margin: 0;
     animation: slideUp 0.3s ease-out;
   }
 
-  /* Tracinho de arrastar (Puxador visual) */
-  .modal-content::before {
-    content: '';
+  .modal-header {
+    padding: 1.5rem;
+    justify-content: flex-end;
+  }
+
+  .drag-handle {
+    display: block;
     position: absolute;
     top: 12px;
     left: 50%;
@@ -475,15 +502,18 @@ code {
     border-radius: 10px;
   }
 
-  .modal-close {
-    top: 1rem;
-    right: 1.25rem;
-    font-size: 1.75rem;
-    color: #9ca3af;
+  .modal-scroll-body {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+  }
+
+  .modal-footer {
+    padding: 1.25rem 1.5rem;
+    padding-bottom: max(1.25rem, env(safe-area-inset-bottom)); /* Previne corte no iOS */
+    box-shadow: 0 -4px 6px -1px rgba(0,0,0,0.05); /* Sombra separando o footer do scroll */
   }
 
   .modal-footer .btn-primary {
-    width: 100%; /* Botão gigante e mais fácil de clicar */
+    width: 100%; 
     justify-content: center;
     padding: 0.85rem;
     border-radius: 10px;
