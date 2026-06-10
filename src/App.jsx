@@ -111,10 +111,22 @@ const DiskIcon = () => <svg width="14" height="14" viewBox="0 0 24 24" fill="non
 const ScreenIcon = () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="2" y1="17" x2="22" y2="17"></line></svg>;
 const GoogleIcon = () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>;
 const InfoIcon = () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>;
+// --- Dados das Lojas Físicas ---
+const physicalStores = [
+  { name: "Mundo do Notebook", rating: "5,0 ⭐ (1,1 mil avaliações)", address: "R. Santa Ifigênia, 386 - Loja 231", phone: "5511985621785", displayPhone: "(11) 98562-1785", time: "Aberto até 17:30", isCell: true },
+  { name: "Sucesso Notebook", rating: "4,9 ⭐ (1,4 mil avaliações)", address: "R. Santa Ifigênia, 280 - Loja 18", phone: "551131320702", displayPhone: "(11) 3132-0702", time: "Aberto até 17:00", isCell: false },
+  { name: "Sa Brito Eletrônicos", rating: "5,0 ⭐ (14 avaliações)", address: "R. Santa Ifigênia, 270 - Loja 22", phone: "5511952233691", displayPhone: "(11) 95223-3691", time: "Aberto até 18:00", isCell: true },
+  { name: "AlphaNote", rating: "5,0 ⭐ (303 avaliações)", address: "R. Santa Ifigênia, 172", phone: "5511967376710", displayPhone: "(11) 96737-6710", time: "Aberto até 17:00", isCell: true },
+  { name: "Ponto Central Informática", rating: "4,9 ⭐ (1,2 mil avaliações)", address: "R. Aurora, 165", phone: "551133314029", displayPhone: "(11) 3331-4029", time: "Aberto até 18:00", isCell: false },
+  { name: "DM Notebooks", rating: "5,0 ⭐ (23 avaliações)", address: "R. Aurora, 200 - Loja 101", phone: "5511992921759", displayPhone: "(11) 99292-1759", time: "Aberto até 17:00", isCell: true },
+  { name: "Elite Info", rating: "4,5 ⭐ (34 avaliações)", address: "R. Santa Ifigênia, 270 - Loja 20", phone: "5511953597665", displayPhone: "(11) 95359-7665", time: "Aberto até 17:30", isCell: true },
+  { name: "WL Informática", rating: "4,8 ⭐ (61 avaliações)", address: "R. dos Andradas, 351 - Loja 123", phone: "5511996745148", displayPhone: "(11) 99674-5148", time: "Aberto até 17:00", isCell: true }
+];
 
 function App() {
   const [selectedCard, setSelectedCard] = useState(null);
   const [touchStartY, setTouchStartY] = useState(null);
+  const [activeTab, setActiveTab] = useState('notebooks'); // 'notebooks' ou 'lojas'
 
   const openModal = (card) => {
     setSelectedCard(card);
@@ -139,7 +151,7 @@ function App() {
     <div className="report-container">
       <div className="report-body">
         
-        <section className="intro-block" style={{marginBottom: '3rem'}}>
+        <section className="intro-block" style={{marginBottom: '2rem'}}>
           <h1 style={{fontSize: '2rem', fontWeight: '700', marginBottom: '1rem', color: '#111827'}}>
             Notebooks que Eu Recomendo pra Você
           </h1>
@@ -148,8 +160,27 @@ function App() {
           </div>
         </section>
 
-        {/* Modelos Recomendados */}
-        <section className="quick-guide-section" style={{marginBottom: '3rem'}}>
+        {/* --- ABAS DE NAVEGAÇÃO --- */}
+        <div className="tabs-container">
+          <button 
+            className={`tab-btn ${activeTab === 'notebooks' ? 'active' : ''}`}
+            onClick={() => setActiveTab('notebooks')}
+          >
+            💻 Modelos
+          </button>
+          <button 
+            className={`tab-btn ${activeTab === 'lojas' ? 'active' : ''}`}
+            onClick={() => setActiveTab('lojas')}
+          >
+            🏬 Lojas Físicas
+          </button>
+        </div>
+
+        {/* --- ABA DE NOTEBOOKS --- */}
+        {activeTab === 'notebooks' && (
+          <div className="tab-content fade-in">
+            {/* Modelos Recomendados */}
+            <section className="quick-guide-section" style={{marginBottom: '3rem'}}>
           <h2 className="section-title">O que eu compraria de olhos fechados:</h2>
           <p style={{marginBottom: '1.5rem', color: '#4b5563'}}>Essas são as melhores opções custo-benefício que achei lá na Santa Ifigênia e Mercado Livre.</p>
           
@@ -219,26 +250,6 @@ function App() {
               <li><code>Dell Latitude 5410 i5 16GB 512GB</code></li>
               <li><code>HP EliteBook 840 G6 i5 16GB 512GB</code></li>
               <li><code>ThinkPad T480 i5 16GB 512GB Full HD</code></li>
-            </ul>
-          </div>
-
-          <div className="aux-card stores-card">
-            <h3 className="aux-card-title">🏬 Lojas Boas na Santa Ifigênia</h3>
-            <ul className="aux-list" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              <li style={{ padding: 0 }}>
-                <strong>Marcomp Informática</strong> (R. Santa Ifigênia, 574)<br/>
-                <a href="https://wa.me/5511947341876?text=Oi%2C+t%C3%B4+procurando+um+notebook+corporativo+seminovo.+Voc%C3%AAs+t%C3%AAm+o+ThinkPad+T490+ou+Dell+Latitude%3F" target="_blank" rel="noreferrer" style={{color: '#10b981', textDecoration: 'none', fontWeight: 'bold', display: 'inline-block', marginTop: '4px'}}>
-                  📱 Chamar no WhatsApp
-                </a>
-              </li>
-              <li style={{ padding: 0 }}>
-                <strong>Cia PC</strong> (R. dos Timbiras, 239)<br/>
-                <a href="https://www.google.com/maps/search/Cia+PC+Santa+Ifigenia" target="_blank" rel="noreferrer" style={{color: '#3b82f6', textDecoration: 'none', display: 'inline-block', marginTop: '4px'}}>📍 Ver no Mapa</a>
-              </li>
-              <li style={{ padding: 0 }}>
-                <strong>Highlander Informática</strong> (R. Santa Ifigênia, 276)<br/>
-                <a href="https://www.google.com/maps/search/Highlander+Informatica+Santa+Ifigenia" target="_blank" rel="noreferrer" style={{color: '#3b82f6', textDecoration: 'none', display: 'inline-block', marginTop: '4px'}}>📍 Ver no Mapa</a>
-              </li>
             </ul>
           </div>
         </div>
@@ -330,6 +341,57 @@ function App() {
             </details>
           </div>
         </section>
+        </div>
+        )}
+
+        {/* --- ABA DE LOJAS FÍSICAS --- */}
+        {activeTab === 'lojas' && (
+          <div className="tab-content fade-in">
+            <h2 className="section-title" style={{marginBottom: '0.5rem'}}>Lojas Recomendadas</h2>
+            <p style={{marginBottom: '2rem', color: '#4b5563'}}>Fiz um levantamento das lojas mais confiáveis (acima de 4.5 estrelas) na região da Santa Ifigênia / Centro de SP para você não perder tempo.</p>
+            
+            <div className="real-stores-grid">
+              {physicalStores.map((store, idx) => (
+                <div key={idx} className="real-store-card">
+                  <div className="store-header">
+                    <h3 className="store-name">{store.name}</h3>
+                    <span className="store-rating">{store.rating}</span>
+                  </div>
+                  <div className="store-info">
+                    <p>📍 {store.address}</p>
+                    <p>🕒 {store.time}</p>
+                  </div>
+                  <div className="store-actions">
+                    <a 
+                      href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(store.name + ' ' + store.address)}`} 
+                      target="_blank" 
+                      rel="noreferrer" 
+                      className="btn-action map-btn"
+                    >
+                      🗺️ CHEGAR (Maps)
+                    </a>
+                    <a 
+                      href={store.isCell ? `https://wa.me/${store.phone}?text=Oi%2C+t%C3%B4+procurando+um+notebook+corporativo+seminovo.+Voc%C3%AAs+t%C3%AAm+o+ThinkPad+T490%3F` : `tel:${store.phone}`} 
+                      target="_blank" 
+                      rel="noreferrer" 
+                      className={`btn-action ${store.isCell ? 'whatsapp-btn' : 'phone-btn'}`}
+                    >
+                      {store.isCell ? '💬 WhatsApp' : '📞 Ligar'} {store.displayPhone}
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            {/* Aviso */}
+            <div className="aux-card tips-card" style={{marginTop: '2rem'}}>
+              <h3 className="aux-card-title">💡 Dica Extra</h3>
+              <p style={{color: '#4b5563', fontSize: '0.95rem', lineHeight: '1.5'}}>
+                Antes de sair de casa ou ir até o centro, clique no botão do WhatsApp e pergunte se eles têm o modelo específico no estoque hoje. O estoque dessas lojas muda muito rápido.
+              </p>
+            </div>
+          </div>
+        )}
 
         <div style={{ paddingBottom: '3rem' }}></div>
       </div>
