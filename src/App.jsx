@@ -285,6 +285,43 @@ function App() {
           </div>
         </section>
 
+        {/* --- CUIDADOS NA LOJA (FAQ) --- */}
+        <section className="faq-section" style={{marginTop: '3rem', marginBottom: '3rem'}}>
+          <div className="section-title" style={{ marginBottom: '1.5rem' }}>
+            <span className="section-icon">🛡️</span> Dicas Rápidas: Como não ser enganado
+          </div>
+          
+          <div className="faq-container">
+            <details className="faq-item">
+              <summary className="faq-question">🔌 O carregador precisa ser o original?</summary>
+              <div className="faq-answer">
+                <strong>Sim!</strong> Exija o carregador ORIGINAL da marca. Carregadores "paralelos" (genéricos) podem estragar a bateria a longo prazo. Se a loja só tiver o paralelo, exija um bom desconto para comprar um original depois.
+              </div>
+            </details>
+
+            <details className="faq-item">
+              <summary className="faq-question">💾 "Tem 1 TERA de espaço, é melhor?"</summary>
+              <div className="faq-answer">
+                <strong>Cuidado com essa lábia!</strong> Um HD antigo de 1 Tera de espaço deixa o notebook lento. É mil vezes melhor levar um SSD de 512GB (que é absurdamente mais rápido) do que um HD gigante que vai travar o seu trabalho.
+              </div>
+            </details>
+
+            <details className="faq-item">
+              <summary className="faq-question">🧾 Qual papel devo sair da loja na mão?</summary>
+              <div className="faq-answer">
+                Não saia só com o comprovante do cartão. Exija um recibo (com o CNPJ da loja) atestando no papel que você tem no mínimo <strong>3 meses de garantia</strong>. Peça para o vendedor anotar o <strong>Número de Série</strong> do notebook nesse recibo.
+              </div>
+            </details>
+
+            <details className="faq-item">
+              <summary className="faq-question">✨ Tem um risquinho na tampa, devo desistir?</summary>
+              <div className="faq-answer">
+                <strong>Não necessariamente.</strong> Notebooks corporativos usados costumam ter marcas de uso na parte externa (como marcas de adesivos antigos ou pequenos arranhões na tampa). O que realmente importa é: a tela não pode ter manchas brancas e as teclas precisam estar todas funcionando.
+              </div>
+            </details>
+          </div>
+        </section>
+
       </div>
 
       {/* --- MODAL DE DETALHES --- */}
