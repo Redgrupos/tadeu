@@ -125,7 +125,50 @@ body {
   color: #111827;
 }
 
-/* Aux Cards Grid (Dicas, Evitar, Lojas, etc) */
+/* --- BOTÕES DOS CARDS --- */
+.quick-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.btn-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btn-outline {
+  background: white;
+  border: 1px solid #d1d5db;
+  color: #374151;
+}
+
+.btn-outline:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+.btn-primary {
+  background: #111827;
+  border: 1px solid #111827;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #1f2937;
+}
+
+/* Aux Cards Grid */
 .aux-cards-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -191,7 +234,6 @@ body {
   color: #1f2937;
 }
 
-/* Phrase Card */
 .phrase-card {
   background: #f8fafc;
   border: 1px solid #e2e8f0;
@@ -207,7 +249,6 @@ body {
   color: #1e293b;
 }
 
-/* Protocol Card */
 .protocol-card {
   border: 1px solid #e5e7eb;
   border-radius: 12px;
@@ -251,6 +292,95 @@ code {
   font-size: 0.9em;
 }
 
+/* --- MODAL DE DETALHES --- */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal-content {
+  background: white;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  padding: 2rem;
+  position: relative;
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem; right: 1rem;
+  background: none; border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.modal-desc {
+  font-size: 1rem;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+.modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.modal-subtitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.modal-list {
+  list-style: none;
+}
+
+.modal-list li {
+  font-size: 0.9rem;
+  color: #374151;
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.modal-pros .modal-list li::before {
+  content: "•";
+  color: #10b981;
+  position: absolute;
+  left: 0; font-weight: bold;
+}
+
+.modal-cons .modal-list li::before {
+  content: "•";
+  color: #ef4444;
+  position: absolute;
+  left: 0; font-weight: bold;
+}
+
+.modal-footer {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
 /* Print e Responsive */
 @media print {
   body { padding: 0; background: white; }
@@ -258,6 +388,7 @@ code {
   .quick-card, .aux-card, .phrase-card, .protocol-card { break-inside: avoid; page-break-inside: avoid; }
   .aux-cards-grid { display: block; }
   .aux-card { margin-bottom: 1.5rem; }
+  .quick-actions { display: none; } /* Oculta botões ao imprimir */
 }
 
 @media (max-width: 900px) {
@@ -268,6 +399,7 @@ code {
   body { padding: 1rem; }
   .report-container { padding: 1.5rem; }
   .aux-cards-grid { grid-template-columns: 1fr; }
+  .modal-grid { grid-template-columns: 1fr; gap: 1rem; }
 }
 
 @media (max-width: 640px) {
@@ -287,7 +419,6 @@ code {
     padding: 1.25rem;
   }
   
-  /* Ajuste crucial para a Tabela no Mobile */
   .gpt-table thead {
     display: none;
   }
