@@ -331,9 +331,7 @@ function App() {
           </div>
         </section>
 
-        <div style={{ textAlign: 'center', marginTop: '3rem', color: '#9ca3af', fontSize: '0.9rem' }}>
-            Montado com carinho e algumas pesquisas na madrugada ☕
-        </div>
+        <div style={{ paddingBottom: '3rem' }}></div>
       </div>
 
       {/* --- MODAL DE DETALHES --- */}
