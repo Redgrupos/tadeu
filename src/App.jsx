@@ -447,13 +447,17 @@ function App() {
             </div>
             
             {/* Footer Fixo */}
-            <div className="modal-footer" style={{ display: 'flex', gap: '0.75rem' }}>
-              <a href={`https://lista.mercadolivre.com.br/${encodeURIComponent(selectedCard.searchQuery.replace(/ /g, '-'))}`} target="_blank" rel="noreferrer" className="btn-action" style={{flex: 1, backgroundColor: '#ffe600', color: '#333', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0.85rem', borderRadius: '10px', fontSize: '1rem', fontWeight: 'bold', textDecoration: 'none'}}>
-                🛒 Mercado Livre
-              </a>
-              <a href={`https://www.youtube.com/results?search_query=Review+${encodeURIComponent(selectedCard.title)}+PT+BR`} target="_blank" rel="noreferrer" className="btn-action" style={{flex: 1, backgroundColor: '#ef4444', color: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0.85rem', borderRadius: '10px', fontSize: '1rem', fontWeight: 'bold', textDecoration: 'none'}}>
-                ▶️ Ver Review
-              </a>
+            <div className="modal-footer">
+              <div className="modal-footer-actions">
+                <a href={`https://lista.mercadolivre.com.br/${encodeURIComponent(selectedCard.searchQuery.replace(/ /g, '-'))}`} target="_blank" rel="noreferrer" className="btn-ml">
+                  <img src="https://cdn.worldvectorlogo.com/logos/mercado-livre.svg" alt="Mercado Livre" className="btn-icon-ml" />
+                  Mercado Livre
+                </a>
+                <a href={`https://www.youtube.com/results?search_query=Review+${encodeURIComponent(selectedCard.title)}+PT+BR`} target="_blank" rel="noreferrer" className="btn-yt">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube" className="btn-icon-yt" />
+                  Ver Review
+                </a>
+              </div>
             </div>
 
           </div>
