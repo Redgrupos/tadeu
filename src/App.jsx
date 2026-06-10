@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // --- Dados dos Cards Rápidos ---
 const quickCards = [
@@ -138,6 +138,23 @@ function App() {
   const [selectedCard, setSelectedCard] = useState(null);
   const [touchStartY, setTouchStartY] = useState(null);
   const [activeTab, setActiveTab] = useState('notebooks'); // 'notebooks' ou 'lojas'
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowScrollTop(true);
+      } else {
+        setShowScrollTop(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const openModal = (card) => {
     setSelectedCard(card);
@@ -461,6 +478,15 @@ function App() {
           </div>
         </div>
       )}
+
+      {/* Botão Subir ao Topo */}
+      <button 
+        className={`scroll-top-btn ${showScrollTop ? 'visible' : ''}`} 
+        onClick={scrollToTop}
+        title="Subir ao topo"
+      >
+        ↑
+      </button>
 
     </div>
   );
