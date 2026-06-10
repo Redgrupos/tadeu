@@ -449,7 +449,7 @@ function App() {
             <div className="modal-footer">
               <div className="modal-footer-actions">
                 <a href={`https://lista.mercadolivre.com.br/${encodeURIComponent(selectedCard.searchQuery.replace(/ /g, '-'))}`} target="_blank" rel="noreferrer" className="btn-ml">
-                  <img src="https://cdn.worldvectorlogo.com/logos/mercado-livre.svg" alt="Mercado Livre" className="btn-icon-ml" />
+                  <img src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.21.22/mercadolivre/logo__small@2x.png" alt="Mercado Livre" className="btn-icon-ml" />
                   Mercado Livre
                 </a>
                 <a href={`https://www.youtube.com/results?search_query=Review+${encodeURIComponent(selectedCard.title)}+PT+BR`} target="_blank" rel="noreferrer" className="btn-yt">
