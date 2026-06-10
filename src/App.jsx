@@ -209,7 +209,7 @@ function App() {
         </section>
 
         {/* --- ABAS DE NAVEGAÇÃO --- */}
-        <div className="tabs-container">
+        <div className="tabs-container" style={{ flexWrap: 'wrap' }}>
           <button 
             className={`tab-btn ${activeTab === 'notebooks' ? 'active' : ''}`}
             onClick={() => setActiveTab('notebooks')}
@@ -221,6 +221,12 @@ function App() {
             onClick={() => setActiveTab('lojas')}
           >
             🏬 Lojas Físicas
+          </button>
+          <button 
+            className={`tab-btn ${activeTab === 'usados' ? 'active' : ''}`}
+            onClick={() => setActiveTab('usados')}
+          >
+            🤔 Usado vale a pena?
           </button>
         </div>
 
@@ -464,6 +470,49 @@ function App() {
                 Antes de sair de casa ou ir até o centro, clique no botão do WhatsApp e pergunte se eles têm o modelo específico no estoque hoje. O estoque dessas lojas muda muito rápido.
               </p>
             </div>
+          </div>
+        )}
+
+        {/* --- ABA DE USADOS --- */}
+        {activeTab === 'usados' && (
+          <div className="tab-content fade-in">
+            <h2 className="section-title" style={{marginBottom: '0.5rem'}}>Vale a pena comprar um notebook usado?</h2>
+            <p style={{marginBottom: '2rem', color: '#4b5563', lineHeight: '1.6'}}>
+              É normal ficar inseguro, afinal, ninguém quer comprar algo que vai quebrar na semana seguinte. Mas existe uma diferença gigantesca entre um "usado comum" e um "usado corporativo".
+            </p>
+
+            <div className="aux-cards-grid" style={{marginBottom: '2rem'}}>
+              <div className="aux-card avoid-card">
+                <h3 className="aux-card-title">❌ O Novo de R$ 2.000</h3>
+                <p style={{color: '#4b5563', fontSize: '0.95rem', marginBottom: '1rem', lineHeight: '1.5'}}>
+                  Se você for numa loja hoje com R$ 2.000, o vendedor vai te oferecer um notebook zero, mas com peças muito fracas (processador Celeron, 4GB de RAM) e feito com um plástico que quebra só de abrir a tampa.
+                </p>
+                <p style={{color: '#4b5563', fontSize: '0.95rem', lineHeight: '1.5'}}>
+                  Eles são lentos desde o primeiro dia e travam só de abrir o Google Chrome e o Word ao mesmo tempo. É dor de cabeça na certa.
+                </p>
+              </div>
+
+              <div className="aux-card" style={{borderColor: '#3b82f6', backgroundColor: '#eff6ff'}}>
+                <h3 className="aux-card-title" style={{color: '#1e40af'}}>✅ O Corporativo de R$ 2.000</h3>
+                <p style={{color: '#1e3a8a', fontSize: '0.95rem', marginBottom: '1rem', lineHeight: '1.5'}}>
+                  Os notebooks dessa lista são <strong>linhas corporativas</strong>. Eles custavam de R$ 7.000 a R$ 10.000 quando novos. Foram construídos com fibra de carbono e alumínio para suportar o uso agressivo das empresas 24h por dia.
+                </p>
+                <p style={{color: '#1e3a8a', fontSize: '0.95rem', lineHeight: '1.5'}}>
+                  As empresas trocam eles a cada 3 anos por conta de contratos de locação. Ao comprar um desses seminovo, você leva um "motor V8" de altíssima qualidade pelo preço de um carro 1.0 zero km.
+                </p>
+              </div>
+            </div>
+
+            <div className="phrase-card" style={{marginBottom: '2.5rem'}}>
+              <p className="phrase-text">"É muito melhor comprar um Toyota Corolla seminovo completão do que um carro mil de plástico zero km. O mesmo vale para notebooks."</p>
+            </div>
+
+            <h3 style={{fontSize: '1.25rem', fontWeight: '700', marginBottom: '1rem', color: '#111827'}}>E se der defeito? Tem garantia!</h3>
+            <ul className="aux-list" style={{marginBottom: '2rem', lineHeight: '1.6'}}>
+              <li>As lojas sérias da Santa Ifigênia compram esses lotes enormes das empresas, limpam, testam tudo, formatam e vendem para você.</li>
+              <li>Eles <strong>são obrigados por lei a te dar 90 dias (3 meses) de garantia</strong>. Se algo der errado nesse tempo, eles trocam a peça ou te dão outra máquina igual na hora.</li>
+              <li>Siga o checklist de testes da aba "Modelos" e saia da loja com a nota de garantia assinada. Se a máquina passar nos seus testes na hora, pode ficar 100% despreocupado.</li>
+            </ul>
           </div>
         )}
 
