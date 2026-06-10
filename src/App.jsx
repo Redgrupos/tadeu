@@ -223,12 +223,22 @@ function App() {
           </div>
 
           <div className="aux-card stores-card">
-            <h3 className="aux-card-title">🏬 Lojas na Santa Ifigênia</h3>
-            <ul className="aux-list">
-              <li>Mundo do Notebook</li>
-              <li>Central Point Computers</li>
-              <li>Note Place</li>
-              <li>Infor Waste Informática</li>
+            <h3 className="aux-card-title">🏬 Lojas Boas na Santa Ifigênia</h3>
+            <ul className="aux-list" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              <li style={{ padding: 0 }}>
+                <strong>Marcomp Informática</strong> (R. Santa Ifigênia, 574)<br/>
+                <a href="https://wa.me/5511947341876?text=Oi%2C+t%C3%B4+procurando+um+notebook+corporativo+seminovo.+Voc%C3%AAs+t%C3%AAm+o+ThinkPad+T490+ou+Dell+Latitude%3F" target="_blank" rel="noreferrer" style={{color: '#10b981', textDecoration: 'none', fontWeight: 'bold', display: 'inline-block', marginTop: '4px'}}>
+                  📱 Chamar no WhatsApp
+                </a>
+              </li>
+              <li style={{ padding: 0 }}>
+                <strong>Cia PC</strong> (R. dos Timbiras, 239)<br/>
+                <a href="https://www.google.com/maps/search/Cia+PC+Santa+Ifigenia" target="_blank" rel="noreferrer" style={{color: '#3b82f6', textDecoration: 'none', display: 'inline-block', marginTop: '4px'}}>📍 Ver no Mapa</a>
+              </li>
+              <li style={{ padding: 0 }}>
+                <strong>Highlander Informática</strong> (R. Santa Ifigênia, 276)<br/>
+                <a href="https://www.google.com/maps/search/Highlander+Informatica+Santa+Ifigenia" target="_blank" rel="noreferrer" style={{color: '#3b82f6', textDecoration: 'none', display: 'inline-block', marginTop: '4px'}}>📍 Ver no Mapa</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -364,9 +374,12 @@ function App() {
             </div>
             
             {/* Footer Fixo */}
-            <div className="modal-footer">
-              <a href={`https://www.google.com/search?q=${encodeURIComponent(selectedCard.searchQuery)}`} target="_blank" rel="noreferrer" className="btn-action btn-primary" style={{display: 'inline-flex', padding: '0.85rem 1.5rem', width: '100%', justifyContent: 'center', fontSize: '1.05rem', borderRadius: '10px'}}>
-                <GoogleIcon /> Buscar este modelo no Google
+            <div className="modal-footer" style={{ display: 'flex', gap: '0.75rem' }}>
+              <a href={`https://lista.mercadolivre.com.br/${encodeURIComponent(selectedCard.searchQuery.replace(/ /g, '-'))}`} target="_blank" rel="noreferrer" className="btn-action" style={{flex: 1, backgroundColor: '#ffe600', color: '#333', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0.85rem', borderRadius: '10px', fontSize: '1rem', fontWeight: 'bold', textDecoration: 'none'}}>
+                🛒 Mercado Livre
+              </a>
+              <a href={`https://www.youtube.com/results?search_query=Review+${encodeURIComponent(selectedCard.title)}+PT+BR`} target="_blank" rel="noreferrer" className="btn-action" style={{flex: 1, backgroundColor: '#ef4444', color: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0.85rem', borderRadius: '10px', fontSize: '1rem', fontWeight: 'bold', textDecoration: 'none'}}>
+                ▶️ Ver Review
               </a>
             </div>
 
