@@ -361,33 +361,33 @@ function App() {
         {/* --- CUIDADOS NA LOJA (FAQ) --- */}
         <section className="faq-section" style={{marginTop: '3rem', marginBottom: '3rem'}}>
           <div className="section-title" style={{ marginBottom: '1.5rem' }}>
-            <span className="section-icon">🛡️</span> Como os caras tentam te enrolar na loja
+            Como os caras tentam te enrolar na loja
           </div>
           
           <div className="faq-container">
             <details className="faq-item">
-              <summary className="faq-question">🔌 O carregador precisa ser o original?</summary>
+              <summary className="faq-question">O carregador precisa ser o original?</summary>
               <div className="faq-answer">
                 <strong>Sim!</strong> Exija o carregador ORIGINAL da marca. Carregadores "paralelos" que eles tentam empurrar vão estragar a bateria a longo prazo. Se ele não tiver o original, peça um bom desconto pra comprar um por fora depois.
               </div>
             </details>
 
             <details className="faq-item">
-              <summary className="faq-question">💾 "Leva esse que tem 1 TERA de espaço"</summary>
+              <summary className="faq-question">"Leva esse que tem 1 TERA de espaço"</summary>
               <div className="faq-answer">
                 <strong>Não cai nessa!</strong> O vendedor vai tentar te dar um HD antigo e lerdo só porque ele tem 1 Tera de espaço. É mil vezes melhor levar o SSD de 512GB (que é absurdamente mais rápido) do que um HD gigante que vai fazer seu Word e CRM travarem na hora H.
               </div>
             </details>
 
             <details className="faq-item">
-              <summary className="faq-question">🧾 Posso sair só com o comprovante do cartão?</summary>
+              <summary className="faq-question">Posso sair só com o comprovante do cartão?</summary>
               <div className="faq-answer">
                 <strong>Jamais.</strong> Exija um recibo com o CNPJ da loja escrito que você tem no mínimo <strong>3 meses de garantia</strong>. Mande o cara anotar o <strong>Número de Série</strong> do notebook (fica embaixo da máquina) nesse recibo. É sua única prova de compra.
               </div>
             </details>
 
             <details className="faq-item">
-              <summary className="faq-question">✨ Achei um risquinho na tampa, desisto?</summary>
+              <summary className="faq-question">Achei um risquinho na tampa, desisto?</summary>
               <div className="faq-answer">
                 <strong>Fica tranquilo.</strong> Esses notes corporativos usados sempre têm um risquinho ou marca de adesivo na tampa, os caras usam eles de qualquer jeito nas empresas. O que importa mesmo é: a tela não pode ter manchas brancas e as teclas tem que estar todas funcionando macias.
               </div>
