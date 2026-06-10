@@ -101,6 +101,26 @@ const quickCards = [
       goodFor: ["Levar em viagem e avião", "Andar o dia todo com ele na mochila", "Vendedores externos"],
       badFor: ["Quem precisa de tela grande pra enxergar melhor", "Ficar 100% do tempo no escritório sem ligar num monitor maior"]
     }
+  },
+  {
+    id: 6,
+    pillText: "👑 Premium",
+    pillClass: "pill-purple",
+    cardClass: "card-highlighted-purple",
+    title: "Latitude 7420",
+    subtitle: "Dell · 11ª geração",
+    cpu: "Intel Core i5-1145G7",
+    ram: "16 GB RAM DDR4",
+    ssd: "SSD NVMe 512 GB",
+    screen: "Tela 14\" Full HD IPS",
+    price: "R$ 2.800 – 3.300",
+    searchQuery: "Notebook Dell Latitude 7420 i5 16gb 512gb",
+    image: "/images/latitude5490.png",
+    details: {
+      summary: "Se tiver uma grana a mais pra investir, pular para a 11ª geração vale muito a pena! O desempenho geral é muito melhor, a bateria dura mais e a webcam tem imagem bem superior para reuniões.",
+      goodFor: ["Quem tem um orçamento flexível até R$ 3.500", "Vídeo-chamadas com melhor imagem", "Bateria para o dia todo de verdade"],
+      badFor: ["Quem quer gastar o mínimo possível", "Jogos extremamente pesados"]
+    }
   }
 ];
 
