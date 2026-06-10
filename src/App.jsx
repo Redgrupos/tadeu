@@ -383,7 +383,7 @@ function App() {
                     </a>
                     {store.phone && (
                       <a 
-                        href={store.isCell ? `https://wa.me/${store.phone}?text=Oi%2C+t%C3%B4+procurando+um+notebook+corporativo+seminovo.+Voc%C3%AAs+t%C3%AAm+o+ThinkPad+T490%3F` : `tel:${store.phone}`} 
+                        href={store.isCell ? `https://wa.me/${store.phone}?text=Ol%C3%A1%21%20Estou%20buscando%20um%20notebook%20seminovo%20corporativo%20com%20Core%20i5%2C%2016GB%20de%20RAM%20e%20SSD%20512GB.%20Voc%C3%AAs%20teriam%20alguma%20boa%20op%C3%A7%C3%A3o%20dispon%C3%ADvel%20hoje%3F` : `tel:${store.phone}`} 
                         target="_blank" 
                         rel="noreferrer" 
                         className={`btn-action ${store.isCell ? 'whatsapp-btn' : 'phone-btn'}`}
