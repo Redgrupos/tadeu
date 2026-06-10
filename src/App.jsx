@@ -453,7 +453,9 @@ function App() {
       {/* Footer / Copyright */}
       <footer style={{ textAlign: 'center', padding: '2rem 1rem', marginTop: '1rem', borderTop: '1px solid #e5e7eb', color: '#6b7280', fontSize: '0.9rem' }}>
         <p>© {new Date().getFullYear()} Todos os direitos reservados.</p>
-        <p style={{ marginTop: '0.25rem', fontWeight: '500', color: '#374151' }}>Feito por Layon Costa ☕</p>
+        <p style={{ marginTop: '0.25rem', fontWeight: '500', color: '#374151' }}>
+          Feito por <a href="https://wa.me/5515991908930" target="_blank" rel="noreferrer" style={{ color: '#2563eb', textDecoration: 'none', fontWeight: '600' }}>Layon Costa</a> ☕
+        </p>
       </footer>
 
       {/* --- MODAL DE DETALHES --- */}
