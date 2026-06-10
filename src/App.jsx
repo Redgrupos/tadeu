@@ -17,9 +17,9 @@ const quickCards = [
     searchQuery: "Notebook Lenovo ThinkPad T490 i5 16gb 512gb",
     image: "/images/t490.png",
     details: {
-      summary: "O T490 é a evolução direta do T480. Ele é um pouco mais fino, leve e traz processadores mais recentes, mantendo o excelente teclado da linha ThinkPad.",
-      goodFor: ["Multitarefa pesada (Muitas abas abertas)", "Planilhas complexas no Excel", "Apresentações e uso de CRMs web", "Uso corporativo intenso diário"],
-      badFor: ["Jogos modernos ou pesados", "Edição de vídeo em 4K", "Renderização 3D complexa"]
+      summary: "Na minha opinião, essa é a melhor máquina hoje. Ele é fino, super leve e o teclado é maravilhoso pra digitar o dia todo.",
+      goodFor: ["Abrir milhões de abas sem travar", "Planilhas pesadonas no Excel", "Apresentações e uso de CRMs web", "Levar pra cima e pra baixo sem pesar"],
+      badFor: ["Jogos de última geração", "Edição de vídeo em 4K"]
     }
   },
   {
@@ -37,9 +37,9 @@ const quickCards = [
     searchQuery: "Notebook Lenovo ThinkPad T480 i5 16gb 512gb",
     image: "/images/t480.png",
     details: {
-      summary: "Conhecido como o 'tanque de guerra' corporativo. É uma máquina extremamente robusta, muito fácil de dar manutenção e trocar peças.",
-      goodFor: ["Estudos e rotinas de escritório", "Trabalhos longos de digitação", "Pessoas desastradas (muito resistente)"],
-      badFor: ["Jogos pesados", "Quem busca design muito fino ou moderno"]
+      summary: "Esse é o famoso 'tanque de guerra'. É uma máquina bruta, que dura a vida inteira e se um dia der defeito, é super barato de arrumar.",
+      goodFor: ["Trabalhos longos de digitação", "Bater de um lado pro outro", "Economizar uma grana no conserto"],
+      badFor: ["Jogos pesados", "Quem liga muito pra estética (ele é mais rústico)"]
     }
   },
   {
@@ -57,9 +57,9 @@ const quickCards = [
     searchQuery: "Notebook HP EliteBook 840 G6 i5 16gb 512gb",
     image: "/images/elitebook.png",
     details: {
-      summary: "A linha EliteBook da HP tem um acabamento impecável em alumínio que lembra os MacBooks. É leve, elegante e tem uma tela de muita qualidade.",
-      goodFor: ["Reuniões com clientes (Visual Premium)", "Transporte constante (Mochila)", "Longas horas de tela (Anti-reflexo)"],
-      badFor: ["Jogos pesados", "Ambientes de poeira ou sujeira (arranha mais fácil que plástico)"]
+      summary: "Esse aqui é pra tirar onda na reunião. Tem um acabamento em alumínio que parece MacBook e a tela é sensacional pra quem fica horas no PC.",
+      goodFor: ["Reuniões com clientes (Visual bem Premium)", "Longas horas de tela (Cansa menos o olho)"],
+      badFor: ["Jogos pesados", "Ambientes com muita sujeira (o alumínio arranha mais que plástico)"]
     }
   },
   {
@@ -77,9 +77,9 @@ const quickCards = [
     searchQuery: "Notebook Dell Latitude 5490 i5 16gb 512gb",
     image: "/images/latitude5490.png",
     details: {
-      summary: "O 5490 é a escolha segura para economizar. Não é a máquina mais bonita ou fina, mas seu processador e memória entregam a mesma velocidade das outras.",
-      goodFor: ["Orçamentos curtos", "Uso básico a intermediário (Word, Excel, Web)", "Escritórios fixos (Pouco transporte)"],
-      badFor: ["Jogos", "Quem se importa com design premium"]
+      summary: "A escolha segura pra gastar pouco. Ele não é o mais bonito da turma, mas tem o mesmo motor (processador) dos outros e dá conta do recado tranquilo.",
+      goodFor: ["Orçamentos mais apertados", "Uso do dia a dia (Word, Excel, Web)", "Deixar mais fixo na mesa"],
+      badFor: ["Jogar", "Quem se importa com design fininho"]
     }
   },
   {
@@ -97,9 +97,9 @@ const quickCards = [
     searchQuery: "Notebook Dell Latitude 7390 i5 16gb 512gb",
     image: "/images/latitude7390.png",
     details: {
-      summary: "O diferencial aqui é o tamanho: tem tela de 13 polegadas, bordas finíssimas e material resistente. Quase não se sente o peso dele na bolsa.",
-      goodFor: ["Levar em voos e viagens curtas", "Transporte urbano diário de transporte público", "Vendedores externos"],
-      badFor: ["Pessoas com visão ruim (tela menor)", "Uso 100% fixo na mesa sem monitor externo"]
+      summary: "O grande truque desse é o tamanho: ele é pequenininho (13 polegadas) e quase não faz peso na bolsa. Ótimo pra quem vive na rua visitando cliente.",
+      goodFor: ["Levar em viagem e avião", "Andar o dia todo com ele na mochila", "Vendedores externos"],
+      badFor: ["Quem precisa de tela grande pra enxergar melhor", "Ficar 100% do tempo no escritório sem ligar num monitor maior"]
     }
   }
 ];
@@ -141,17 +141,17 @@ function App() {
         
         <section className="intro-block" style={{marginBottom: '3rem'}}>
           <h1 style={{fontSize: '2rem', fontWeight: '700', marginBottom: '1rem', color: '#111827'}}>
-            Guia de Aquisição de Notebook
+            Notebooks que Eu Recomendo pra Você
           </h1>
           <div className="context-box" style={{backgroundColor: '#f3f4f6', padding: '1.25rem', borderRadius: '10px', color: '#374151'}}>
-            <p>Para ChatGPT, Gamma, PowerPoint, Excel, CRM, Canva e projetos da TS, os equipamentos abaixo com <strong>16 GB RAM</strong> e <strong>SSD 512 GB</strong> entregam uma excelente experiência para multitarefas em 2026.</p>
+            <p>Dei uma pesquisada nas melhores opções pensando no que você vai usar (ChatGPT, Excel, CRM, etc). Foquei em máquinas com <strong>16 GB de RAM</strong> e <strong>SSD de 512 GB</strong> pra garantir que nada vai travar nos próximos anos.</p>
           </div>
         </section>
 
         {/* Modelos Recomendados */}
         <section className="quick-guide-section" style={{marginBottom: '3rem'}}>
-          <h2 className="section-title">Modelos Recomendados</h2>
-          <p style={{marginBottom: '1.5rem', color: '#4b5563'}}>Abaixo estão as opções de compra prioritárias para o seu perfil.</p>
+          <h2 className="section-title">O que eu compraria de olhos fechados:</h2>
+          <p style={{marginBottom: '1.5rem', color: '#4b5563'}}>Essas são as melhores opções custo-benefício que achei lá na Santa Ifigênia e Mercado Livre.</p>
           
           <div className="quick-cards-grid">
             {quickCards.map((card) => (
@@ -192,24 +192,23 @@ function App() {
         {/* Grade de Cards Auxiliares */}
         <div className="aux-cards-grid">
           <div className="aux-card avoid-card">
-            <h3 className="aux-card-title danger-text">🚨 Modelos para Evitar</h3>
+            <h3 className="aux-card-title danger-text">🚨 Foge desses aqui!</h3>
             <ul className="aux-list">
-              <li>Processadores <strong>Celeron</strong> ou <strong>Pentium</strong>.</li>
-              <li>Intel Core <strong>i3 antigos</strong>.</li>
-              <li>Apenas <strong>8 GB de RAM</strong> (Vai travar seu CRM).</li>
-              <li><strong>HD mecânico</strong> sem SSD (Lentidão extrema).</li>
-              <li>Tela HD 1366x768 (Imagem embaçada, exige-se Full HD).</li>
+              <li>Qualquer coisa com <strong>Celeron</strong> ou <strong>Pentium</strong> (Fria total).</li>
+              <li>Processadores Intel Core <strong>i3 muito antigos</strong>.</li>
+              <li>Máquinas com só <strong>8 GB de RAM</strong> (Vai engasgar o seu CRM).</li>
+              <li>Aparelhos que tenham <strong>HD mecânico</strong> no lugar de SSD (Lentidão absurda).</li>
+              <li>Telas antigas HD 1366x768 (A imagem fica ruim, exija tela Full HD).</li>
             </ul>
           </div>
 
           <div className="aux-card tips-card">
-            <h3 className="aux-card-title">💡 Dicas antes de comprar</h3>
+            <h3 className="aux-card-title">💡 Fique de olho nisso</h3>
             <ul className="aux-list">
-              <li>Peça fotos reais da tela e do teclado: desgaste indica uso pesado.</li>
-              <li>Confira a saúde da bateria: acima de 75% é o ideal.</li>
-              <li>Verifique se o SSD é NVMe: mais rápido que SATA.</li>
-              <li>Evite anúncios sem informar a geração do processador.</li>
-              <li>Prefira vendedores com nota alta e garantia.</li>
+              <li>Pede foto real do teclado: se tiver muito gasto, o note foi moído de trabalhar.</li>
+              <li>Olha se a saúde da bateria tá acima de 75%.</li>
+              <li>Vendedor não colocou a "geração" do processador no anúncio? Pula fora.</li>
+              <li>Só compre se o cara der nota fiscal e no mínimo 3 meses de garantia.</li>
             </ul>
           </div>
 
@@ -236,10 +235,10 @@ function App() {
 
         {/* Frase para loja */}
         <section className="phrase-section" style={{marginTop: '3rem', marginBottom: '3rem'}}>
-          <h2 className="section-title">Como abordar o vendedor</h2>
+          <h2 className="section-title">O que falar pro vendedor (Pra ele não te enrolar)</h2>
           <div className="phrase-card">
             <p className="phrase-text">
-              "Estou procurando um notebook corporativo, i5 de 8ª geração ou superior, 16 GB RAM, SSD 512 GB e tela Full HD. Tenho até R$ 2.500."
+              "Chega nele e fala exatamente assim: 'Tô procurando um notebook corporativo seminovo, processador i5 de 8ª geração pra cima, com 16 GB de RAM, SSD de 512 e tela Full HD. Meu teto pra gastar é uns R$ 2.500.'"
             </p>
           </div>
         </section>
@@ -247,9 +246,9 @@ function App() {
         {/* Protocolo de Validação */}
         <section className="checklist-section">
           <div className="protocol-card">
-            <h2 className="section-title" style={{marginBottom: '0.5rem'}}>Protocolo de Validação na Loja</h2>
+            <h2 className="section-title" style={{marginBottom: '0.5rem'}}>Testes pra fazer antes de passar o cartão</h2>
             <p style={{marginBottom: '1.5rem', color: '#4b5563', fontSize: '0.95rem'}}>
-              Siga estes testes na mesa do vendedor antes de efetuar o pagamento.
+              Senta lá na mesa dele e confere isso aqui rapidão pra não ter dor de cabeça depois.
             </p>
             
             <table className="gpt-table">
@@ -288,40 +287,43 @@ function App() {
         {/* --- CUIDADOS NA LOJA (FAQ) --- */}
         <section className="faq-section" style={{marginTop: '3rem', marginBottom: '3rem'}}>
           <div className="section-title" style={{ marginBottom: '1.5rem' }}>
-            <span className="section-icon">🛡️</span> Dicas Rápidas: Como não ser enganado
+            <span className="section-icon">🛡️</span> Como os caras tentam te enrolar na loja
           </div>
           
           <div className="faq-container">
             <details className="faq-item">
               <summary className="faq-question">🔌 O carregador precisa ser o original?</summary>
               <div className="faq-answer">
-                <strong>Sim!</strong> Exija o carregador ORIGINAL da marca. Carregadores "paralelos" (genéricos) podem estragar a bateria a longo prazo. Se a loja só tiver o paralelo, exija um bom desconto para comprar um original depois.
+                <strong>Sim!</strong> Exija o carregador ORIGINAL da marca. Carregadores "paralelos" que eles tentam empurrar vão estragar a bateria a longo prazo. Se ele não tiver o original, peça um bom desconto pra comprar um por fora depois.
               </div>
             </details>
 
             <details className="faq-item">
-              <summary className="faq-question">💾 "Tem 1 TERA de espaço, é melhor?"</summary>
+              <summary className="faq-question">💾 "Leva esse que tem 1 TERA de espaço"</summary>
               <div className="faq-answer">
-                <strong>Cuidado com essa lábia!</strong> Um HD antigo de 1 Tera de espaço deixa o notebook lento. É mil vezes melhor levar um SSD de 512GB (que é absurdamente mais rápido) do que um HD gigante que vai travar o seu trabalho.
+                <strong>Não cai nessa!</strong> O vendedor vai tentar te dar um HD antigo e lerdo só porque ele tem 1 Tera de espaço. É mil vezes melhor levar o SSD de 512GB (que é absurdamente mais rápido) do que um HD gigante que vai fazer seu Word e CRM travarem na hora H.
               </div>
             </details>
 
             <details className="faq-item">
-              <summary className="faq-question">🧾 Qual papel devo sair da loja na mão?</summary>
+              <summary className="faq-question">🧾 Posso sair só com o comprovante do cartão?</summary>
               <div className="faq-answer">
-                Não saia só com o comprovante do cartão. Exija um recibo (com o CNPJ da loja) atestando no papel que você tem no mínimo <strong>3 meses de garantia</strong>. Peça para o vendedor anotar o <strong>Número de Série</strong> do notebook nesse recibo.
+                <strong>Jamais.</strong> Exija um recibo com o CNPJ da loja escrito que você tem no mínimo <strong>3 meses de garantia</strong>. Mande o cara anotar o <strong>Número de Série</strong> do notebook (fica embaixo da máquina) nesse recibo. É sua única prova de compra.
               </div>
             </details>
 
             <details className="faq-item">
-              <summary className="faq-question">✨ Tem um risquinho na tampa, devo desistir?</summary>
+              <summary className="faq-question">✨ Achei um risquinho na tampa, desisto?</summary>
               <div className="faq-answer">
-                <strong>Não necessariamente.</strong> Notebooks corporativos usados costumam ter marcas de uso na parte externa (como marcas de adesivos antigos ou pequenos arranhões na tampa). O que realmente importa é: a tela não pode ter manchas brancas e as teclas precisam estar todas funcionando.
+                <strong>Fica tranquilo.</strong> Esses notes corporativos usados sempre têm um risquinho ou marca de adesivo na tampa, os caras usam eles de qualquer jeito nas empresas. O que importa mesmo é: a tela não pode ter manchas brancas e as teclas tem que estar todas funcionando macias.
               </div>
             </details>
           </div>
         </section>
 
+        <div style={{ textAlign: 'center', marginTop: '3rem', color: '#9ca3af', fontSize: '0.9rem' }}>
+            Montado com carinho e algumas pesquisas na madrugada ☕
+        </div>
       </div>
 
       {/* --- MODAL DE DETALHES --- */}
