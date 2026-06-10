@@ -209,7 +209,7 @@ function App() {
         </section>
 
         {/* --- ABAS DE NAVEGAÇÃO --- */}
-        <div className="tabs-container" style={{ flexWrap: 'wrap' }}>
+        <div className="tabs-container">
           <button 
             className={`tab-btn ${activeTab === 'notebooks' ? 'active' : ''}`}
             onClick={() => setActiveTab('notebooks')}

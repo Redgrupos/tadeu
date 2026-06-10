@@ -374,6 +374,12 @@ code {
   margin-bottom: 2rem;
   border-bottom: 2px solid #e5e7eb;
   padding-bottom: 0px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+.tabs-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
 }
 
 .tab-btn {
@@ -388,6 +394,7 @@ code {
   transition: all 0.2s;
   border-radius: 8px 8px 0 0;
   margin-bottom: -2px; /* Pull down to overlap border */
+  white-space: nowrap;
 }
 
 .tab-btn:hover {
