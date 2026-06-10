@@ -450,6 +450,12 @@ function App() {
         <div style={{ paddingBottom: '3rem' }}></div>
       </div>
 
+      {/* Footer / Copyright */}
+      <footer style={{ textAlign: 'center', padding: '2rem 1rem', marginTop: '1rem', borderTop: '1px solid #e5e7eb', color: '#6b7280', fontSize: '0.9rem' }}>
+        <p>© {new Date().getFullYear()} Todos os direitos reservados.</p>
+        <p style={{ marginTop: '0.25rem', fontWeight: '500', color: '#374151' }}>Feito por Layon Costa ☕</p>
+      </footer>
+
       {/* --- MODAL DE DETALHES --- */}
       {selectedCard && (
         <div className="modal-overlay" onClick={closeModal}>
