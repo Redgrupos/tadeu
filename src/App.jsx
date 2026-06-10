@@ -220,13 +220,13 @@ function App() {
             className={`tab-btn ${activeTab === 'lojas' ? 'active' : ''}`}
             onClick={() => setActiveTab('lojas')}
           >
-            🏬 Lojas Físicas
+            🏬 Lojas
           </button>
           <button 
             className={`tab-btn ${activeTab === 'usados' ? 'active' : ''}`}
             onClick={() => setActiveTab('usados')}
           >
-            🤔 Usado vale a pena?
+            🤔 Usados?
           </button>
         </div>
 
