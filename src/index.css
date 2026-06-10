@@ -265,10 +265,52 @@ code {
 }
 
 @media (max-width: 768px) {
+  body { padding: 1rem; }
   .report-container { padding: 1.5rem; }
   .aux-cards-grid { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 600px) {
-  .quick-cards-grid { grid-template-columns: 1fr; }
+@media (max-width: 640px) {
+  body {
+    padding: 0;
+    background: white;
+  }
+  .report-container {
+    padding: 1.25rem;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .quick-cards-grid { 
+    grid-template-columns: 1fr; 
+  }
+  .protocol-card, .aux-card, .quick-card, .phrase-card {
+    padding: 1.25rem;
+  }
+  
+  /* Ajuste crucial para a Tabela no Mobile */
+  .gpt-table thead {
+    display: none;
+  }
+  .gpt-table tbody tr {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .gpt-table tbody tr:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .gpt-table th, .gpt-table td {
+    border: none;
+    padding: 0;
+    width: 100% !important;
+  }
+  .gpt-table td:first-child {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    color: #111827;
+  }
 }
