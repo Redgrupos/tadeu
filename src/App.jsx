@@ -113,14 +113,26 @@ const GoogleIcon = () => <svg width="14" height="14" viewBox="0 0 24 24" fill="n
 const InfoIcon = () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>;
 // --- Dados das Lojas Físicas ---
 const physicalStores = [
-  { name: "Mundo do Notebook", rating: "5,0 ⭐ (1,1 mil avaliações)", address: "R. Santa Ifigênia, 386 - Loja 231", phone: "5511985621785", displayPhone: "(11) 98562-1785", time: "Aberto até 17:30", isCell: true },
-  { name: "Sucesso Notebook", rating: "4,9 ⭐ (1,4 mil avaliações)", address: "R. Santa Ifigênia, 280 - Loja 18", phone: "551131320702", displayPhone: "(11) 3132-0702", time: "Aberto até 17:00", isCell: false },
-  { name: "Sa Brito Eletrônicos", rating: "5,0 ⭐ (14 avaliações)", address: "R. Santa Ifigênia, 270 - Loja 22", phone: "5511952233691", displayPhone: "(11) 95223-3691", time: "Aberto até 18:00", isCell: true },
-  { name: "AlphaNote", rating: "5,0 ⭐ (303 avaliações)", address: "R. Santa Ifigênia, 172", phone: "5511967376710", displayPhone: "(11) 96737-6710", time: "Aberto até 17:00", isCell: true },
-  { name: "Ponto Central Informática", rating: "4,9 ⭐ (1,2 mil avaliações)", address: "R. Aurora, 165", phone: "551133314029", displayPhone: "(11) 3331-4029", time: "Aberto até 18:00", isCell: false },
-  { name: "DM Notebooks", rating: "5,0 ⭐ (23 avaliações)", address: "R. Aurora, 200 - Loja 101", phone: "5511992921759", displayPhone: "(11) 99292-1759", time: "Aberto até 17:00", isCell: true },
-  { name: "Elite Info", rating: "4,5 ⭐ (34 avaliações)", address: "R. Santa Ifigênia, 270 - Loja 20", phone: "5511953597665", displayPhone: "(11) 95359-7665", time: "Aberto até 17:30", isCell: true },
-  { name: "WL Informática", rating: "4,8 ⭐ (61 avaliações)", address: "R. dos Andradas, 351 - Loja 123", phone: "5511996745148", displayPhone: "(11) 99674-5148", time: "Aberto até 17:00", isCell: true }
+  { name: "Mundo do Notebook", rating: "5,0 ⭐", address: "R. Santa Ifigênia, 386 - Loja 231", phone: "5511985621785", displayPhone: "(11) 98562-1785", isCell: true },
+  { name: "Shopping dos Notebooks", rating: "4,4 ⭐", address: "R. dos Gusmões", phone: "", displayPhone: "", isCell: false },
+  { name: "Sucesso Notebook", rating: "4,9 ⭐", address: "R. Santa Ifigênia, 280 - Loja 18", phone: "551131320702", displayPhone: "(11) 3132-0702", isCell: false },
+  { name: "Sa Brito Eletrônicos", rating: "5,0 ⭐", address: "R. Santa Ifigênia, 270 - Loja 22", phone: "5511952233691", displayPhone: "(11) 95223-3691", isCell: true },
+  { name: "Highlander Informática", rating: "4,4 ⭐", address: "R. Santa Ifigênia, 276", phone: "551132234724", displayPhone: "(11) 3223-4724", isCell: false },
+  { name: "Status Notebooks", rating: "5,0 ⭐", address: "Santa Ifigênia (Centro)", phone: "5511994051923", displayPhone: "(11) 99405-1923", isCell: true },
+  { name: "Jp informatica", rating: "4,7 ⭐", address: "R. Santa Ifigênia, 309", phone: "5511956837898", displayPhone: "(11) 95683-7898", isCell: true },
+  { name: "AlphaNote", rating: "5,0 ⭐", address: "R. Santa Ifigênia, 172", phone: "5511967376710", displayPhone: "(11) 96737-6710", isCell: true },
+  { name: "Pcnotes", rating: "4,5 ⭐", address: "R. Aurora, 200 - Loja 104", phone: "551133377801", displayPhone: "(11) 3337-7801", isCell: false },
+  { name: "Ponto Central Informática", rating: "4,9 ⭐", address: "R. Aurora, 165", phone: "551133314029", displayPhone: "(11) 3331-4029", isCell: false },
+  { name: "Notebook Repair", rating: "4,9 ⭐", address: "R. Santa Ifigênia, 80", phone: "", displayPhone: "", isCell: false },
+  { name: "Info3 Informática", rating: "4,9 ⭐", address: "R. Santa Ifigênia, 265 - Sala 25", phone: "", displayPhone: "", isCell: false },
+  { name: "Lojas Santa Ifigênia", rating: "4,2 ⭐", address: "Viaduto Santa Ifigênia, 70", phone: "551120502228", displayPhone: "(11) 2050-2228", isCell: false },
+  { name: "DM Notebooks", rating: "5,0 ⭐", address: "R. Aurora, 200 - Loja 101", phone: "5511992921759", displayPhone: "(11) 99292-1759", isCell: true },
+  { name: "Elite Info", rating: "4,5 ⭐", address: "R. Santa Ifigênia, 270 - Loja 20", phone: "5511953597665", displayPhone: "(11) 95359-7665", isCell: true },
+  { name: "Pontocom Informática", rating: "5,0 ⭐", address: "R. Santa Ifigênia, 198 - Loja 30A", phone: "", displayPhone: "", isCell: false },
+  { name: "Original Eletrônicos", rating: "4,4 ⭐", address: "R. Santa Ifigênia, 276 - Loja 4B", phone: "551133313267", displayPhone: "(11) 3331-3267", isCell: false },
+  { name: "WL Informática", rating: "4,8 ⭐", address: "R. dos Andradas, 351 - Loja 123", phone: "5511996745148", displayPhone: "(11) 99674-5148", isCell: true },
+  { name: "GF Notebooks", rating: "5,0 ⭐", address: "R. Santa Ifigênia, 250", phone: "", displayPhone: "", isCell: false },
+  { name: "SKYNOTE", rating: "4,8 ⭐", address: "R. Aurora, 263", phone: "", displayPhone: "", isCell: false }
 ];
 
 function App() {
@@ -359,7 +371,6 @@ function App() {
                   </div>
                   <div className="store-info">
                     <p>📍 {store.address}</p>
-                    <p>🕒 {store.time}</p>
                   </div>
                   <div className="store-actions">
                     <a 
@@ -370,14 +381,16 @@ function App() {
                     >
                       🗺️ CHEGAR (Maps)
                     </a>
-                    <a 
-                      href={store.isCell ? `https://wa.me/${store.phone}?text=Oi%2C+t%C3%B4+procurando+um+notebook+corporativo+seminovo.+Voc%C3%AAs+t%C3%AAm+o+ThinkPad+T490%3F` : `tel:${store.phone}`} 
-                      target="_blank" 
-                      rel="noreferrer" 
-                      className={`btn-action ${store.isCell ? 'whatsapp-btn' : 'phone-btn'}`}
-                    >
-                      {store.isCell ? '💬 WhatsApp' : '📞 Ligar'} {store.displayPhone}
-                    </a>
+                    {store.phone && (
+                      <a 
+                        href={store.isCell ? `https://wa.me/${store.phone}?text=Oi%2C+t%C3%B4+procurando+um+notebook+corporativo+seminovo.+Voc%C3%AAs+t%C3%AAm+o+ThinkPad+T490%3F` : `tel:${store.phone}`} 
+                        target="_blank" 
+                        rel="noreferrer" 
+                        className={`btn-action ${store.isCell ? 'whatsapp-btn' : 'phone-btn'}`}
+                      >
+                        {store.isCell ? '💬 WhatsApp' : '📞 Ligar'} {store.displayPhone}
+                      </a>
+                    )}
                   </div>
                 </div>
               ))}
