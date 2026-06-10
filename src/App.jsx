@@ -114,7 +114,7 @@ const InfoIcon = () => <svg width="14" height="14" viewBox="0 0 24 24" fill="non
 // --- Dados das Lojas Físicas ---
 const physicalStores = [
   { name: "Mundo do Notebook", rating: "5,0 ⭐", address: "R. Santa Ifigênia, 386 - Loja 231", phone: "5511985621785", displayPhone: "(11) 98562-1785", isCell: true },
-  { name: "Shopping dos Notebooks", rating: "4,4 ⭐", address: "R. dos Gusmões", phone: "", displayPhone: "", isCell: false },
+  { name: "Shopping dos Notebooks", rating: "4,4 ⭐", address: "R. dos Gusmões, 310 - Loja 4", phone: "5511963262759", displayPhone: "(11) 96326-2759", isCell: true },
   { name: "Sucesso Notebook", rating: "4,9 ⭐", address: "R. Santa Ifigênia, 280 - Loja 18", phone: "551131320702", displayPhone: "(11) 3132-0702", isCell: false },
   { name: "Sa Brito Eletrônicos", rating: "5,0 ⭐", address: "R. Santa Ifigênia, 270 - Loja 22", phone: "5511952233691", displayPhone: "(11) 95223-3691", isCell: true },
   { name: "Highlander Informática", rating: "4,4 ⭐", address: "R. Santa Ifigênia, 276", phone: "551132234724", displayPhone: "(11) 3223-4724", isCell: false },
@@ -123,16 +123,15 @@ const physicalStores = [
   { name: "AlphaNote", rating: "5,0 ⭐", address: "R. Santa Ifigênia, 172", phone: "5511967376710", displayPhone: "(11) 96737-6710", isCell: true },
   { name: "Pcnotes", rating: "4,5 ⭐", address: "R. Aurora, 200 - Loja 104", phone: "551133377801", displayPhone: "(11) 3337-7801", isCell: false },
   { name: "Ponto Central Informática", rating: "4,9 ⭐", address: "R. Aurora, 165", phone: "551133314029", displayPhone: "(11) 3331-4029", isCell: false },
-  { name: "Notebook Repair", rating: "4,9 ⭐", address: "R. Santa Ifigênia, 80", phone: "", displayPhone: "", isCell: false },
-  { name: "Info3 Informática", rating: "4,9 ⭐", address: "R. Santa Ifigênia, 265 - Sala 25", phone: "", displayPhone: "", isCell: false },
+  { name: "Notebook Repair", rating: "4,9 ⭐", address: "R. Santa Ifigênia, 80 - loja 10", phone: "5511959425507", displayPhone: "(11) 95942-5507", isCell: true },
+  { name: "Info3 Informática", rating: "4,9 ⭐", address: "R. Santa Ifigênia, 265 - Sala 25", phone: "551133623750", displayPhone: "(11) 3362-3750", isCell: false },
   { name: "Lojas Santa Ifigênia", rating: "4,2 ⭐", address: "Viaduto Santa Ifigênia, 70", phone: "551120502228", displayPhone: "(11) 2050-2228", isCell: false },
   { name: "DM Notebooks", rating: "5,0 ⭐", address: "R. Aurora, 200 - Loja 101", phone: "5511992921759", displayPhone: "(11) 99292-1759", isCell: true },
   { name: "Elite Info", rating: "4,5 ⭐", address: "R. Santa Ifigênia, 270 - Loja 20", phone: "5511953597665", displayPhone: "(11) 95359-7665", isCell: true },
-  { name: "Pontocom Informática", rating: "5,0 ⭐", address: "R. Santa Ifigênia, 198 - Loja 30A", phone: "", displayPhone: "", isCell: false },
+  { name: "Pontocom Informática", rating: "5,0 ⭐", address: "R. Santa Ifigênia, 198 - Loja 30A", phone: "5511960336198", displayPhone: "(11) 96033-6198", isCell: true },
   { name: "Original Eletrônicos", rating: "4,4 ⭐", address: "R. Santa Ifigênia, 276 - Loja 4B", phone: "551133313267", displayPhone: "(11) 3331-3267", isCell: false },
   { name: "WL Informática", rating: "4,8 ⭐", address: "R. dos Andradas, 351 - Loja 123", phone: "5511996745148", displayPhone: "(11) 99674-5148", isCell: true },
-  { name: "GF Notebooks", rating: "5,0 ⭐", address: "R. Santa Ifigênia, 250", phone: "", displayPhone: "", isCell: false },
-  { name: "SKYNOTE", rating: "4,8 ⭐", address: "R. Aurora, 263", phone: "", displayPhone: "", isCell: false }
+  { name: "GF Notebooks", rating: "5,0 ⭐", address: "R. Santa Ifigênia, 250 - Loja 56/58", phone: "551132231362", displayPhone: "(11) 3223-1362", isCell: false }
 ];
 
 function App() {
