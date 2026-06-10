@@ -110,8 +110,15 @@ const InfoIcon = () => <svg width="14" height="14" viewBox="0 0 24 24" fill="non
 function App() {
   const [selectedCard, setSelectedCard] = useState(null);
 
-  const openModal = (card) => setSelectedCard(card);
-  const closeModal = () => setSelectedCard(null);
+  const openModal = (card) => {
+    setSelectedCard(card);
+    document.body.style.overflow = 'hidden'; // Evita que a tela de fundo role
+  };
+  
+  const closeModal = () => {
+    setSelectedCard(null);
+    document.body.style.overflow = ''; // Restaura o scroll
+  };
 
   return (
     <div className="report-container">

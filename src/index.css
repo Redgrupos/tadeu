@@ -309,6 +309,8 @@ code {
   background: white;
   width: 100%;
   max-width: 600px;
+  max-height: 90vh; /* Limita a altura a 90% da tela */
+  overflow-y: auto; /* Adiciona scrollbar interna se ficar maior que a tela */
   border-radius: 12px;
   padding: 2rem;
   position: relative;
@@ -400,6 +402,7 @@ code {
   .report-container { padding: 1.5rem; }
   .aux-cards-grid { grid-template-columns: 1fr; }
   .modal-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .modal-content { padding: 1.5rem; max-height: 95vh; }
 }
 
 @media (max-width: 640px) {
